@@ -25,8 +25,8 @@ public class UserProfile {
 	@Column(name = "first_name")
 	private String firstName;
 	
-	@Column(name = "second_name")
-	private String secondName;
+	@Column(name = "last_name")
+	private String lastName;
 	
 	@Column(name = "profile_picture")
 	private String profilePicture;
@@ -57,19 +57,19 @@ public class UserProfile {
 		super();
 	}
 	
-	public UserProfile(User user, String firstName, String secondName) {
+	public UserProfile(User user, String firstName, String lastName) {
 		super();
 		this.user = user;
 		this.firstName = firstName;
-		this.secondName = secondName;
+		this.lastName = lastName;
 	}
 	
-	public UserProfile(User user, String firstName, String secondName, String profilePicture, String countryCode,
+	public UserProfile(User user, String firstName, String lastName, String profilePicture, String countryCode,
 			String localityCode, Date birthdate) {
 		super();
 		this.user = user;
 		this.firstName = firstName;
-		this.secondName = secondName;
+		this.lastName = lastName;
 		this.profilePicture = profilePicture;
 		this.countryCode = countryCode;
 		this.localityCode = localityCode;
@@ -92,12 +92,12 @@ public class UserProfile {
 		this.firstName = firstName;
 	}
 
-	public String getSecondName() {
-		return secondName;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setSecondName(String secondName) {
-		this.secondName = secondName;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getProfilePicture() {
@@ -142,7 +142,7 @@ public class UserProfile {
 
 	@Override
 	public String toString() {
-		return "UserProfile: {user=" + user + ", firstName=" + firstName + ", secondName=" + secondName
+		return "UserProfile: {user=" + user + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", profilePicture=" + profilePicture + ", countryCode=" + countryCode + ", localityCode="
 				+ localityCode + ", birthdate=" + birthdate + "}";
 	} 	
